@@ -8,7 +8,7 @@ import { Act } from '../components/act/act';
 })
 export class ActService {
 
-  private baseUrl = "http://localhost:8080/acts";
+  private baseUrl = "https://back-taller-electiva-2.herokuapp.com/acts";
 
   constructor(private httpAct: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class MeetService {
 
-  private baseUrl = "http://localhost:8080/meets";
+  private baseUrl = "https://back-taller-electiva-2.herokuapp.com/meets";
 
   constructor(private httpMeet: HttpClient) { }
 

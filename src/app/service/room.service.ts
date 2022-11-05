@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RoomService {
 
-  private baseUrl = "http://localhost:8080/rooms";
+  private baseUrl = "https://back-taller-electiva-2.herokuapp.com/rooms";
 
   constructor(private httpRoom: HttpClient) { }
 

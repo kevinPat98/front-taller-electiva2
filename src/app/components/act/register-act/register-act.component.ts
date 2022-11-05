@@ -24,15 +24,26 @@ export class RegisterActComponent implements OnInit {
   }
 
   saveAct(){
-     this.selectedObject= +this.act.meet;
-     this.meetService.obtenerMeetId(this.selectedObject).subscribe(dato => {
-       this.act.meet = dato;
+    this.selectedObject= +this.act.meet;
+    this.meetService.obtenerMeetId(this.selectedObject).subscribe(dato => {
+      console.log("acta mala",this.act);
+       this.act.meet= dato;
+       console.log("acta buena",this.act);
        this.actService.registerAct(this.act).subscribe(dato => {
-         console.log(dato);
-         this.irListAct();
-         swal('Acta Guardada', `El Acta ${this.act.description} ha sido guardada con exito`,`success`);
-       }, error => console.log(error));
+        console.log(dato);
+        this.irListAct();
+        swal('Sala Guardada', `La Sala ${this.act.description} ha sido guardada con exito`,`success`);
+      }, error => console.log(error));
      })
+    //  this.selectedObject= +this.act.meet;
+    //  this.meetService.obtenerMeetId(this.selectedObject).subscribe(dato => {
+    //    this.act.meet = dato;
+    //    this.actService.registerAct(this.act).subscribe(dato => {
+    //      console.log(dato);
+    //      this.irListAct();
+    //      swal('Acta Guardada', `El Acta ${this.act.description} ha sido guardada con exito`,`success`);
+    //    }, error => console.log(error));
+    //  })
     // console.log(this.act);
     // this.actService.registerAct(this.act).subscribe(dato => {
     //   console.log(dato);

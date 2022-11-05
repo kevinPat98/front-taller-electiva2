@@ -52,6 +52,7 @@ export class ListMeetsComponent implements OnInit {
 
   private obtenerMeet(){
     this.MeetService.obtenerLisMeet().subscribe(dato => {
+      console.log(dato);
       this.meets = dato;
     });
   }

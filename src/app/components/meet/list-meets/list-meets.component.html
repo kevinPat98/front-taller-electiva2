@@ -6,7 +6,7 @@
       <th>Dia de la reunion</th>
       <th>Asunto</th>
       <th>Sala</th>
-      <th>Acta</th>
+      <th>Acta</th> 
       <th>Acciones</th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
       <td>{{meet.dateMeet}}</td>
       <td>{{meet.affair}}</td>
       <td>{{meet.room.description}}</td>
-      <td>{{meet.act.description}}</td>
+      <td>{{meet.act.description}}</td> 
       <td>
         <button (click)="updateMeet(meet.id)" class="btn btn-info">Editar</button>
         <button (click)="deleteMeet(meet.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
