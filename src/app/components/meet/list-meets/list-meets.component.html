@@ -1,0 +1,27 @@
+<h2>Lista de Reuniones</h2>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Dia de la reunion</th>
+      <th>Asunto</th>
+      <th>Sala</th>
+      <th>Acta</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let meet of meets">
+      <td>{{meet.id}}</td>
+      <td>{{meet.dateMeet}}</td>
+      <td>{{meet.affair}}</td>
+      <td>{{meet.room.description}}</td>
+      <td>{{meet.act.description}}</td>
+      <td>
+        <button (click)="updateMeet(meet.id)" class="btn btn-info">Editar</button>
+        <button (click)="deleteMeet(meet.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+        <button (click)="detailsMeet(meet.id)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,38 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Actualizacion de Reuniones</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div>
+        <label
+          ><b>ID : {{ meet.id }}</b></label
+        >
+      </div>
+      <label>Dia</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        id="dateMeet"
+        [(ngModel)]="meet.dateMeet"
+        name="dateMeet"
+        required
+        #dateMeet="ngModel"
+      />
+      <!-- <div class="alet alert-danger" *ngIf= "dateMeet.invalid && (dateMeet.dirty || dateMeet.touched)">
+        <div *ngIf = "dateMeet.errors.required">Digite la descripcion por favor</div>
+      </div> -->
+      <label>Asunto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="affair"
+        [(ngModel)]="meet.affair"
+        name="affair"
+        required
+        placeholder="Escriba un asunto"
+        #affair="ngModel"
+      />
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+  </form>
+</div>

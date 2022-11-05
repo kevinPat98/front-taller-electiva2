@@ -1,0 +1,24 @@
+<h2>Lista de Salas</h2>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Descripcion</th>
+      <th>Capacidad</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let room of rooms">
+      <td>{{room.id}}</td>
+      <td>{{room.description}}</td>
+      <td>{{room.capacity}}</td>
+      <td>
+        <button (click)="updateRoom(room.id)" class="btn btn-info">Editar</button>
+        <button (click)="deleteRoom(room.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+        <button (click)="detailsRoom(room.id)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,25 @@
+<h2>Lista de Actas</h2>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Desciption</th>
+      <th>Dia</th>
+      <th>Asunto</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let act of acts">
+      <td>{{act.id}}</td>
+      <td>{{act.description}}</td>
+      <td>{{act.meet.dateMeet}}</td>
+      <td>{{act.meet.affair}}</td>
+      <td>
+        <button (click)="updateAct(act.id)" class="btn btn-info">Editar</button>
+        <button (click)="deleteAct(act.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+        <button (click)="detailsAct(act.id)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

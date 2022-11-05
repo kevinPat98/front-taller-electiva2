@@ -1,0 +1,30 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Actualización de Salas</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Descripcion</label>
+      <input type="text" class="form-control"
+      id="description"
+      [(ngModel)]="room.description"
+      name="description"
+      required
+      placeholder="Escriba una descripcion a la sala"
+      #description = "ngModel"
+      >
+      <!-- <div class="alet alert-danger" *ngIf= "description.invalid && (description.dirty || description.touched)">
+        <div *ngIf = "description.errors.required">Digite la descripcion por favor</div>
+      </div> -->
+      <label>Capacidad</label>
+      <input type="text" class="form-control"
+      id="capacity"
+      [(ngModel)]="room.capacity"
+      name="capacity"
+      required
+      placeholder="Escriba un asunto"
+      #capacity = "ngModel"
+      >
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+  </form>
+</div>
